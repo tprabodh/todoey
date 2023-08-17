@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 
-class AddTask extends StatefulWidget {
-  AddTask({Key? key}) : super(key: key);
-
-  @override
-  State<AddTask> createState() => _AddTaskState();
-}
-
-class _AddTaskState extends State<AddTask> {
-String taskInput='';
-
+class AddTask extends StatelessWidget {
+final Function addTaskCallback;
+AddTask({super.key, required this.addTaskCallback});
   @override
   Widget build(BuildContext context) {
+    String newTaskInput='';
+
     return  Container(
       color:Color(0xff757575),
       child: Container(
@@ -35,9 +30,7 @@ String taskInput='';
             SizedBox(height: 20.0),
             TextField(
               onChanged: (val){
-                setState(() {
-                  taskInput=val;
-                });
+                newTaskInput=val;
               },
               decoration: InputDecoration(
                 hintText: "Enter a Task",
@@ -47,7 +40,9 @@ String taskInput='';
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 20.0),
-          ElevatedButton(onPressed: (){},
+          ElevatedButton(onPressed: (){
+            addTaskCallback(newTaskInput);
+          },
               child: Text("Add"),
           )
           ],
