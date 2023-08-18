@@ -1,53 +1,57 @@
 import 'package:flutter/material.dart';
 
-class AddTask extends StatelessWidget {
-final Function addTaskCallback;
-AddTask({super.key, required this.addTaskCallback});
+class AddTaskScreen extends StatelessWidget {
+
+  final Function addTaskCallback;
+
+  const AddTaskScreen({super.key,required this.addTaskCallback});
   @override
   Widget build(BuildContext context) {
-    String newTaskInput='';
+    String? newTaskTitle;
 
-    return  Container(
-      color:Color(0xff757575),
+    return Container(
+      color: Color(0xff757575),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 50.0,vertical: 20.0),
-        decoration: BoxDecoration(
+        padding: EdgeInsets.all(20.0),
+        decoration: const BoxDecoration(
           color: Colors.white,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20.0),
-                topRight: Radius.circular(20.0),)
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20.0),
+            topRight: Radius.circular(20.0),
+          ),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text("Add Task",
+          children: <Widget>[
+             const Text(
+              'Add Task',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.lightBlueAccent,
-                fontWeight: FontWeight.bold,
                 fontSize: 30.0,
-                ),),
-            SizedBox(height: 20.0),
-            TextField(
-              onChanged: (val){
-                newTaskInput=val;
-              },
-              decoration: InputDecoration(
-                hintText: "Enter a Task",
-                focusColor: Colors.cyan
+                color: Colors.lightBlueAccent,
               ),
+            ),
+            TextField(
               autofocus: true,
               textAlign: TextAlign.center,
+              onChanged: (newText) {
+                newTaskTitle = newText;
+              },
             ),
-            SizedBox(height: 20.0),
-          ElevatedButton(onPressed: (){
-            addTaskCallback(newTaskInput);
-          },
-              child: Text("Add"),
-          )
+            ElevatedButton(
+              child: const Text(
+                'Add',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: () {
+                addTaskCallback(newTaskTitle);
+              },
+            ),
           ],
         ),
-      )
+      ),
     );
   }
 }
