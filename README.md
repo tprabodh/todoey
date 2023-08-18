@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://example.com/your-logo.png" alt="Todoey Logo" width="200">
+  <img src="https://to-do-cdn.microsoft.com/static-assets/c87265a87f887380a04cf21925a56539b29364b51ae53e089c3ee2b2180148c6/icons/logo.png" alt="Todoey Logo" width="200">
   <br>
   Todoey App
   <br>
@@ -15,7 +15,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-1.0-blue.svg" alt="Version 1.0">
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
 </p>
 
 <p align="center">
