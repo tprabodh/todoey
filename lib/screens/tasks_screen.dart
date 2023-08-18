@@ -15,7 +15,6 @@ class _TaskScreenState extends State<TaskScreen> {
   @override
   Widget build(BuildContext context) {
     final taskData = Provider.of<TaskData>(context);
-    final tasks = taskData.tasks;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       floatingActionButton: FloatingActionButton(
@@ -65,7 +64,7 @@ class _TaskScreenState extends State<TaskScreen> {
                       fontSize: 50.0,
                       fontWeight: FontWeight.w700,
                     )),
-                Text('${tasks.length} Tasks',
+                Text('${taskData.taskCount} Tasks',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,
@@ -82,7 +81,7 @@ class _TaskScreenState extends State<TaskScreen> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20.0),
                       topRight: Radius.circular(20.0))),
-              child: TasksList(),
+              child: const TasksList(),
             ),
           )
         ],
