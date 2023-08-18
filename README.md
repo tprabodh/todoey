@@ -1,16 +1,45 @@
-# todoey
+<h1 align="center">
+  <br>
+  <img src="https://to-do-cdn.microsoft.com/static-assets/c87265a87f887380a04cf21925a56539b29364b51ae53e089c3ee2b2180148c6/icons/logo.png" alt="Todoey Logo" width="200">
+  <br>
+  Todoey App
+  <br>
+</h1>
 
-A new Flutter project.
+<p align="center">
+  <b>A stylish and user-friendly todo list app.</b>
+  <br>
+  <i>Keep track of your tasks in a breeze!</i>
+  <br>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0-blue.svg" alt="Version 1.0">
+</p>
+
+<p align="center">
+  <img src="https://example.com/demo-screenshot.png" alt="App Screenshot" width="800">
+</p>
+
+## Features
+
+- 📝 Add and manage tasks easily
+- ✅ Mark tasks as complete
+- 🗑️ Delete tasks with a long press
+- 🎨 Stylish and intuitive user interface
+- 📱 Responsive design for various devices
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository: `git clone https://github.com/your-username/todoey.git`
+2. Install dependencies: `flutter pub get`
+3. Run the app: `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Task List | Add Task | Responsive Design |
+| --- | --- | --- |
+| ![Task List](https://example.com/screenshot-task-list.png) | ![Add Task](https://example.com/screenshot-add-task.png) | ![Responsive Design](https://example.com/screenshot-responsive.png) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+---
